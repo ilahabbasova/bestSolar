@@ -1,0 +1,218 @@
+/* Base reset and box-sizing for consistent layout */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+}
+
+/* Apply a natural box layout model to all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Body background color with gradient */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    background: linear-gradient(90deg, #3498db, #e67e22); /* Gradient from blue to orange */
+    color: #333; /* Text color */
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header styling with gradient background */
+header {
+    padding: 30px;
+    text-align: center;
+    color: white;
+    border-bottom: 5px solid #d35400;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Text shadow for depth */
+}
+
+/* Navigation bar */
+nav {
+    background-color: #34495e; /* Dark gray-blue */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 10px;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav li a {
+    color: #ecf0f1; /* Light text color */
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+}
+
+nav li a:hover,
+nav li.active a {
+    background-color: #e67e22; /* Hover and active state in orange */
+    color: white;
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Main content section */
+main {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 8px;
+}
+
+/* Fieldset for forms */
+main fieldset {
+    border: 2px solid #e67e22;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow effect */
+}
+
+main fieldset legend {
+    font-weight: bold;
+    color: #e67e22;
+    font-size: 1.2rem;
+}
+
+/* Form inputs and selects */
+main form input,
+main form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+main form input:focus,
+main form select:focus {
+    border-color: #3498db; /* Focus state with blue border */
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5); /* Blue glow effect on focus */
+}
+
+/* Button styles with gradient and hover effects */
+main button {
+    width: 100%;
+    background: linear-gradient(90deg, #e67e22, #f39c12); /* Gradient from orange to yellow */
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for button */
+}
+
+main button:hover {
+    background: linear-gradient(90deg, #f39c12, #e67e22); /* Hover gradient reversed */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+main button:active {
+    transform: scale(0.98); /* Slight shrink effect when clicked */
+}
+
+/* Feedback section */
+#feedback {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#feedback h2 {
+    color: #e67e22;
+}
+
+#feedback p {
+    line-height: 1.5;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    background: #34495e; /* Dark gray-blue */
+    color: white;
+    padding: 20px;
+    font-size: 0.8rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow at the top of the footer */
+}
+
+footer a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin-bottom: 10px;
+    }
+
+    main {
+        padding: 15px;
+    }
+}
+
+@media only screen and (min-width: 30em) {
+   main figure { 
+       width:70%;
+       float: right;
+   } 
+}
